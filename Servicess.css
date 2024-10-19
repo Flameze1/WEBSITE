@@ -1,0 +1,225 @@
+
+header {
+    background-color: #7091E6; /* Slightly transparent blue */
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 12px; /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+
+
+/* Optional: Add hover effect if you want the header to be interactive */
+header:hover {
+    background-color: #ECECEC; /* Slightly darker blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.content {
+    display: flex;  /* Flexbox layout to place sidebar and form side by side */
+    height: 100vh;  /* Ensure the content takes up the full viewport height */
+    align-items: flex-start;
+    gap: 20px; /* Add space between the sidebar and the form */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem; /* Large font size similar to the image */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Convert text to uppercase */
+    color: #fff; /* White color, as in the image */
+    font-family: 'Impact', 'Arial Black', sans-serif; /* Using a bold, impactful font */
+    align-self: center;
+    margin: auto;
+}
+
+
+/* Sidebar styling */
+
+.sidebar {
+    width: 250px;
+    height: 100vh; /* Extend the sidebar to the full height of the viewport */
+    background-color: #8697C4;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover {
+    background-color: #ECECEC;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-content {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: #ECECEC;
+    padding: 10px;
+}
+
+.dropdown-content li {
+    margin-bottom: 5px;
+}
+
+.dropdown-content a {
+    font-size: 16px;
+    color: #cfd8e3;
+    border-radius: 8px;
+    padding: 5px 10px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #ffffff;
+    background-color: #4a5568;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* General Styles */
+body {
+    background-image: url('/zambian-kwacha-a-background-2C20W86.jpg');
+    background-size: 20%; /* Start with a small background size */
+    background-position: bottom left; /* Start from the bottom left */
+    animation: backgroundPop 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth and natural animation */
+}
+
+/* Define the keyframes for the animation */
+@keyframes backgroundPop {
+    0% {
+        background-size: 20%; /* Small size at the beginning */
+        background-position: bottom left; /* Start at the bottom left corner */
+    }
+    60% {
+        background-size: 120%; /* Slight overshoot for a smoother effect */
+        background-position: center; /* Move towards the center */
+    }
+    100% {
+        background-size: cover; /* Final full-screen size */
+        background-position: center; /* Center the image at the end */
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Form Section */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
+    
+    
+}
+
+
+
+label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #34495e; /* Darker text for labels */
+    align-items: center;
+
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7; /* Soft border */
+    border-radius: 4px;
+    background-color: #ecf0f1;
+    font-size: 16px;
+}
+
+input[readonly] {
+    background-color: #f1f1f1;
+    color: #666;
+}
+
+button {
+    width: 100%;
+    background-color: #1abc9c; /* Vibrant green button */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #16a085; /* Slightly darker on hover */
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #transactionForm {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Adds space between the icon and the text */
+}
+
+
+.nav-icons {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Adds space between the icon and the text */
+}

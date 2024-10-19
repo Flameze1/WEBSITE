@@ -1,0 +1,273 @@
+body {
+background: linear-gradient(to bottom, #F0F4F8, #E0ECF8);
+min-height: 50vh;
+margin: 0;
+}
+
+/* Content Layout */
+.contentss {
+display: flex;                  /* Flexbox layout to place sidebar and form side by side */
+height: 100vh;                  /* Ensure the content takes up the full viewport height */
+align-items: flex-start;
+gap: 20px;                      /* Add space between the sidebar and the form */
+padding: 20px;
+}
+
+.contents {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    min-height: 100vh;       /* Full viewport height */
+    flex-direction: column;  /* Stack items vertically */
+}
+
+/* Sidebar Styling */
+.sidebar {
+width: 250px;
+height: 100vh;                  /* Extend the sidebar to the full height of the viewport */
+background-color: #8697C4;
+color: white;
+padding: 20px;
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease; /* Smooth sliding */
+}
+
+.dashboard-title {
+font-size: 24px;
+margin-bottom: 30px;
+font-weight: bold;
+}
+
+.nav-list {
+list-style: none;
+padding: 0;
+}
+
+.nav-item {
+margin-bottom: 10px;
+}
+
+.nav-link {
+color: white;
+text-decoration: none;
+font-size: 18px;
+display: block;
+padding: 10px;
+border-radius: 10px;
+transition: background-color 0.3s ease, box-shadow 0.3s ease;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover {
+background-color: #ECECEC;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-icon,
+.nav-icons {
+width: 20px;
+height: 20px;
+margin-right: 10px; /* Adds space between the icon and the text */
+}
+
+/* Dropdown Styling */
+.dropdown-content {
+display: none;
+list-style: none;
+padding-left: 20px;
+margin-top: 5px;
+border-radius: 10px;
+background-color: #ADBBDA;
+padding: 10px;
+}
+
+.dropdown-content li {
+margin-bottom: 5px;
+}
+
+.dropdown-content a {
+font-size: 16px;
+color: #cfd8e3;
+border-radius: 8px;
+padding: 5px 10px;
+display: block;
+}
+
+.dropdown-content a:hover {
+color: #ffffff;
+background-color: #4a5568;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Topbar Styling */
+.topbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #fff;
+padding: 10px 20px;
+border-bottom: 1px solid #ddd;
+position: sticky;
+top: 0;
+z-index: 10;
+}
+.logo{
+width: 20px;                    /* Set the width of the icon */
+height: 10px;                   /* Set the height of the icon */
+margin-right: 8px;              /* Add some space between the icon and the text */
+vertical-align: middle;  
+
+}
+/* Search Bar */
+.search-bar {
+flex-grow: 1;
+padding: 0 20px;
+}
+
+.search-input {
+width: 100%;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 14px;
+}
+
+/* Language Selector */
+.language-selector {
+margin-right: 20px;
+}
+
+.language-selector select {
+padding: 5px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+/* Notification Bell */
+.notification {
+position: relative;
+margin-right: 20px;
+}
+
+.bell-icon {
+width: 24px;
+height: 24px;
+cursor: pointer;
+}
+
+.notification-count {
+position: absolute;
+top: -5px;
+right: -5px;
+background-color: red;
+color: white;
+border-radius: 50%;
+padding: 2px 6px;
+font-size: 12px;
+font-weight: bold;
+}
+
+/* User Profile */
+.user-profile {
+display: flex;
+align-items: center;
+position: relative;
+}
+
+.profile-pic {
+width: 32px;
+height: 32px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.user-name {
+font-weight: 500;
+cursor: pointer;
+}
+
+/* Profile Dropdown */
+.user-profile:hover .dropdown {
+display: block;
+}
+
+.dropdowns {
+display: none;
+position: absolute;
+top: 100%;
+right: 0;
+background-color: #fff;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 4px;
+min-width: 150px;
+}
+
+.dropdown-menu {
+list-style: none;
+padding: 10px;
+}
+
+.dropdown-menu li {
+margin-bottom: 10px;
+}
+
+.dropdown-menu li:last-child {
+margin-bottom: 0;
+}
+
+.dropdown-menu li a {
+text-decoration: none;
+color: #333;
+font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+color: #007bff;
+}
+
+.charts-section {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 600px;   /* Increased width for larger charts */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chart-container {
+    background-color: #f4f4f4;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the canvas charts fill the container */
+canvas {
+    width: 100% !important;  /* Make the canvas take full width of its container */
+    height: auto !important; /* Adjust height proportionally */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    body {
+        display: block;  /* Stack everything vertically on smaller screens */
+    }
+
+    .charts-section {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #form-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
